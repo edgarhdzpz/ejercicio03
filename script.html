@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Documento con Script Incrustado</title>
+</head>
+<body>
+    <h1>Gestión de Sabores</h1>
+    <samp id="name"></samp>
+
+
+    <script>
+        // Array de sabores inicializado con 3 sabores
+        let sabores = ['Vainilla', 'Chocolate', 'Fresa'];
+
+        // Función que cuenta e imprime la cantidad de sabores
+        function contarSabores() {
+            console.log(`Cantidad de sabores: ${sabores.length}`);
+        }
+
+        // Función que imprime el array de sabores
+        function mostrarSabores() {
+            console.log('Sabores:', sabores);
+        }
+
+        //funcion agregar sabor
+        function agregarSabor() {
+            let nuevoSabor = prompt('Introduce un nuevo sabor:');
+            sabores.push(nuevoSabor);
+        }
+
+        // Función que saluda al usuario y pide su nombre
+        function saludar() {
+            let nombre = prompt('¿Cuál es tu nombre?');
+            console.log(`¡Hola, ${nombre}! bienvenido a gestion de sabores`);
+        }
+
+        // Función principal que organiza las llamadas a otras funciones
+        function main() {
+            saludar();             // Saludar y pedir el nombre del usuario
+            mostrarSabores();      // Mostrar los sabores actuales
+            agregarSabor() // Agregar un nuevo sabor
+            contarSabores();       // Contar los sabores después de agregar uno nuevo
+            mostrarSabores();      // Mostrar los sabores después de agregar uno nuevo
+            agregarSabor();  // Agregar otro nuevo sabor
+            contarSabores();       // Contar los sabores después de agregar el segundo nuevo sabor
+            mostrarSabores();      // Mostrar los sabores después de agregar el segundo nuevo sabor
+        }
+
+        // Invocar la función principal
+        main();
+    </script>
+</body>
+</html>
